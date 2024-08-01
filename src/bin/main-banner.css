@@ -1,0 +1,11 @@
+section[data-code='banner'] > div[data-info='computer'] {
+    @apply lg:block hidden;
+}
+
+section[data-code='banner'] > div[data-info='mobile'] {
+    @apply lg:hidden block;
+}
+
+.main-banner-pc img, .main-banner-mb img {
+    @apply rounded-b-xl;
+}

@@ -1,0 +1,1030 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-Bold.eot');
+        src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+        url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-Bold.woff2') format('woff2'),
+        url('../fonts/GothamPro-Bold.woff') format('woff'),
+        url('../fonts/GothamPro-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-Light.eot');
+        src: local('Gotham Pro Light'), local('GothamPro-Light'),
+        url('../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-Light.woff2') format('woff2'),
+        url('../fonts/GothamPro-Light.woff') format('woff'),
+        url('../fonts/GothamPro-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-Black.eot');
+        src: local('Gotham Pro Black'), local('GothamPro-Black'),
+        url('../fonts/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-Black.woff2') format('woff2'),
+        url('../fonts/GothamPro-Black.woff') format('woff'),
+        url('../fonts/GothamPro-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-Italic.eot');
+        src: local('Gotham Pro Italic'), local('GothamPro-Italic'),
+        url('../fonts/GothamPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-Italic.woff2') format('woff2'),
+        url('../fonts/GothamPro-Italic.woff') format('woff'),
+        url('../fonts/GothamPro-Italic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro Narrow';
+        src: url('../fonts/GothamProNarrow-Bold.eot');
+        src: local('Gotham Pro Narrow Bold'), local('GothamProNarrow-Bold'),
+        url('../fonts/GothamProNarrow-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamProNarrow-Bold.woff2') format('woff2'),
+        url('../fonts/GothamProNarrow-Bold.woff') format('woff'),
+        url('../fonts/GothamProNarrow-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-Medium.eot');
+        src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+        url('../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-Medium.woff2') format('woff2'),
+        url('../fonts/GothamPro-Medium.woff') format('woff'),
+        url('../fonts/GothamPro-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-BoldItalic.eot');
+        src: local('Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'),
+        url('../fonts/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-BoldItalic.woff2') format('woff2'),
+        url('../fonts/GothamPro-BoldItalic.woff') format('woff'),
+        url('../fonts/GothamPro-BoldItalic.ttf') format('truetype');
+        font-weight: bold;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro.eot');
+        src: local('Gotham Pro'), local('GothamPro'),
+        url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro.woff2') format('woff2'),
+        url('../fonts/GothamPro.woff') format('woff'),
+        url('../fonts/GothamPro.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-MediumItalic.eot');
+        src: local('Gotham Pro Medium Italic'), local('GothamPro-MediumItalic'),
+        url('../fonts/GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-MediumItalic.woff2') format('woff2'),
+        url('../fonts/GothamPro-MediumItalic.woff') format('woff'),
+        url('../fonts/GothamPro-MediumItalic.ttf') format('truetype');
+        font-weight: 500;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-BlackItalic.eot');
+        src: local('Gotham Pro Black Italic'), local('GothamPro-BlackItalic'),
+        url('../fonts/GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-BlackItalic.woff2') format('woff2'),
+        url('../fonts/GothamPro-BlackItalic.woff') format('woff'),
+        url('../fonts/GothamPro-BlackItalic.ttf') format('truetype');
+        font-weight: 900;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro Narrow';
+        src: url('../fonts/GothamProNarrow-Medium.eot');
+        src: local('Gotham Pro Narrow Medium'), local('GothamProNarrow-Medium'),
+        url('../fonts/GothamProNarrow-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamProNarrow-Medium.woff2') format('woff2'),
+        url('../fonts/GothamProNarrow-Medium.woff') format('woff'),
+        url('../fonts/GothamProNarrow-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro-LightItalic.eot');
+        src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'),
+        url('../fonts/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamPro-LightItalic.woff2') format('woff2'),
+        url('../fonts/GothamPro-LightItalic.woff') format('woff'),
+        url('../fonts/GothamPro-LightItalic.ttf') format('truetype');
+        font-weight: 300;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    html {
+        font-family: 'Gotham Pro', serif;
+        text-rendering: geometricPrecision;
+        @apply scroll-smooth;
+    }
+
+    .container {
+        @apply px-20;
+    }
+
+    .block-top {
+        @apply bg-[#eeeeee];
+        @apply h-[861px];
+        @apply w-full;
+    }
+
+    .block-top-diagonal {
+        @apply rotate-180;
+    }
+
+    .block-top-diagonal svg {
+        @apply h-[94px];
+        @apply w-full;
+    }
+
+    .block-top-grid {
+        @apply flex;
+        @apply items-center;
+        @apply justify-start;
+        @apply pt-36;
+    }
+
+    .block-top_start-time, .block-top_header, .block-top_desc, .block-top_btn {
+        @apply text-[#505050];
+        @apply select-none;
+    }
+
+    .block-top_start-time {
+        @apply text-lg;
+        @apply pb-10;
+    }
+
+    .block-top_header {
+        @apply w-[34rem];
+        @apply text-6xl;
+        @apply font-semibold;
+        @apply pb-10;
+    }
+
+    .block-top_header span {
+        color: rgba(247, 31, 92, 1);
+    }
+
+    .block-top_desc {
+        @apply w-[27rem];
+        @apply text-2xl;
+        @apply pb-12;
+    }
+
+    .block-top_btn {
+        @apply w-max cursor-pointer;
+        background: rgba(253, 184, 49, 1);
+        @apply transition-all;
+        @apply rounded-3xl;
+        @apply text-white;
+        @apply leading-none;
+        @apply py-6 px-12;
+        @apply select-none;
+    }
+
+    .block-top_btn:hover {
+        background: rgba(229, 160, 25, 1);
+        @apply text-white;
+    }
+
+    .block-top_btn:active {
+        background: rgba(229, 160, 25, 1);
+        @apply text-white;
+        transform: scale(0.97);
+    }
+
+    .block-top-men-anim {
+        @apply relative;
+    }
+
+    .block-top-men-bg {
+        background-color: #cdcdcd;
+        left: 280px;
+        @apply z-10;
+        @apply w-[381px];
+        @apply h-[620px];
+        @apply absolute;
+        @apply transition-all;
+        @apply origin-center rotate-[6deg];
+        animation: bg-anim-top-pl 3s ease-in-out infinite;
+    }
+
+    .block-top-men-img {
+        @apply z-20;
+        @apply w-[426px];
+        @apply h-auto;
+        left: 180px;
+        @apply relative;
+        @apply origin-center rotate-[-6deg];
+        @apply transition-all;
+        animation: bg-anim-top-ng 3s ease-in-out infinite;
+    }
+
+    .block-top-men-bg, .block-top-men-img {
+        @apply rounded-3xl;
+    }
+
+    @keyframes bg-anim-top-pl {
+        0% {
+            @apply origin-center rotate-[6deg];
+        }
+        50% {
+            @apply origin-center rotate-[8deg];
+        }
+        100% {
+            @apply origin-center rotate-[6deg];
+        }
+    }
+
+    @keyframes bg-anim-top-ng {
+        0% {
+            @apply origin-center rotate-[-6deg];
+        }
+        50% {
+            @apply origin-center rotate-[-8deg];
+        }
+        100% {
+            @apply origin-center rotate-[-6deg];
+        }
+    }
+    .block-top-men-name, .block-top-men-quest {
+        @apply text-white
+    }
+
+    .block-top-men-name {
+        @apply text-xl;
+    }
+
+    .block-top-men-quest {
+        @apply text-sm;
+    }
+
+    .block-top-men-quest:hover {
+        @apply cursor-pointer;
+        color: rgba(253, 184, 49, 1);
+    }
+
+    .block-top-men-desc {
+        @apply z-30 relative;
+        @apply left-60 -top-16;
+    }
+
+    .base-desc-bg {
+        background: rgba(245, 248, 250, 1);
+        width: 90%;
+        height: 580px;
+        border-radius: 50%;
+        @apply origin-center rotate-[10deg];
+        @apply absolute;
+    }
+
+    .base-desc-text {
+        @apply mt-24;
+        color: rgba(38, 42, 46, 1);
+        @apply w-10/12;
+        @apply z-20 relative;
+        @apply text-center text-xl leading-9;
+    }
+
+    .base-desc-text div {
+        @apply py-2;
+    }
+
+    .block-yellow {
+        @apply bg-[#FDB831];
+        @apply py-20;
+        @apply w-full;
+        margin-top: 240px;
+    }
+
+    .block-yellow-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl;
+        @apply pb-4;
+    }
+
+    .block-yellow-grid {
+        @apply grid grid-cols-4 gap-4 pt-8;
+    }
+
+    .block-yellow-grid-item {
+        @apply bg-white;
+        @apply rounded-3xl;
+        @apply p-6;
+        @apply transition-all;
+        @apply cursor-default;
+    }
+
+    .block-yellow-grid-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .block-yellow-grid-item-img {
+        @apply text-center py-4;
+        @apply text-9xl;
+        @apply border-b-2;
+        border-color: rgba(253, 184, 49, 1);
+    }
+
+    .block-yellow-grid-item-text {
+        @apply text-lg text-center px-2 py-4;
+    }
+
+    .block-yellow-svg-top, .block-yellow-svg-bottom {
+        fill: rgba(253, 184, 49, 1);
+    }
+
+    .block-yellow-svg-top {
+        @apply relative -top-28;
+    }
+
+    .block-yellow-svg-bottom {
+        @apply rotate-180;
+    }
+
+    .what-talk {
+        @apply py-24;
+    }
+
+    .what-talk-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl;
+        @apply pb-4;
+    }
+
+    .what-talk-grid {
+        @apply grid grid-cols-2 gap-16;
+        @apply pt-8 justify-items-start;
+    }
+
+    .what-talk-grid-item-user {
+        @apply flex items-center;
+    }
+
+    .what-talk-grid-item-header {
+        @apply text-xl font-[];
+        @apply pb-8;
+    }
+
+    .what-talk-grid-item-text {
+        @apply pb-6;
+    }
+
+    .what-talk-grid-item-user img {
+        @apply rounded-full;
+        @apply w-14 h-14 flex-none;
+    }
+
+    .what-talk-grid-item-user div {
+        @apply grow pl-8;
+    }
+
+    .what-in-course {
+        @apply bg-[#eeeeee];
+        @apply py-20;
+        @apply w-full;
+    }
+
+    .what-in-course-svg-top, .what-in-course-svg-bottom {
+        fill: #eeeeee;
+    }
+
+    .what-in-course-svg-top {
+        @apply relative -top-28;
+    }
+
+    .what-in-course-svg-bottom {
+        @apply rotate-180;
+    }
+
+    .what-in-course-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl;
+        @apply pb-4;
+    }
+
+    .what-in-course-grid {
+        @apply grid grid-cols-3 gap-3 pt-8;
+    }
+
+    .what-in-course-grid-item {
+        @apply flex items-center;
+    }
+
+    .what-in-course-grid-item-svg {
+        @apply w-14 h-14 flex-none rounded-full;
+        background: rgba(253, 184, 49, 1);
+    }
+
+    .what-in-course-grid-item-svg svg {
+        fill: rgba(38, 42, 46, 1);
+        @apply w-8 h-8;
+        @apply mx-auto mt-2.5;
+    }
+
+    .what-in-course-grid-item-text {
+        @apply grow pl-8;
+        color: rgba(38, 42, 46, 1);
+    }
+
+    .what-in-course-grid-item-text-head {
+        @apply text-2xl;
+        color: rgba(253, 184, 49, 1);
+        @apply font-medium;
+    }
+
+    .what-in-course-grid-item-text-desc {
+        color: rgba(38, 42, 46, 1);
+    }
+
+    .zapis-in-course {
+        @apply bg-white;
+        @apply py-20;
+        @apply w-full;
+    }
+
+    .zapis-in-course-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl;
+        @apply pb-4;
+    }
+
+    .zapis-in-course-grid {
+        @apply grid grid-cols-2 gap-2 pt-8;
+    }
+
+    .zapis-in-course-grid-item {
+        @apply relative;
+    }
+
+    .zapis-in-course-header {
+        @apply w-[57%];
+    }
+
+    .zapis-in-course-grid form {
+        @apply w-96;
+    }
+
+    .btn-base {
+        @apply select-none;
+        @apply w-full cursor-pointer;
+        background: rgba(253, 184, 49, 1);
+        @apply transition-all;
+        @apply rounded-3xl;
+        @apply text-white;
+        @apply leading-none;
+        @apply py-4 px-8;
+        @apply mt-4;
+    }
+
+    .btn-base:hover {
+        background: rgba(229, 160, 25, 1);
+        @apply text-white;
+    }
+
+    .btn-base:active {
+        background: rgba(229, 160, 25, 1);
+        @apply text-white;
+        transform: scale(0.97);
+    }
+
+    .zapis-in-course-desc-bg {
+        background: rgba(245, 248, 250, 1);
+        width: 671px;
+        height: 568px;
+        border-radius: 50%;
+        @apply origin-center rotate-[-13deg];
+        @apply absolute;
+        top: -140px;
+    }
+
+    .zapis-in-course-desc-multi-text {
+        @apply relative;
+    }
+
+    .zapis-in-course-desc-text-one {
+        @apply absolute;
+        @apply text-lg;
+        @apply w-64;
+        transform: rotate(-5deg) perspective(0);
+        top: -30px;
+        left: 175px;
+    }
+
+    .zapis-in-course-desc-text-two {
+        @apply absolute;
+        @apply text-lg;
+        @apply w-80;
+        top: 90px;
+        left: 164px;
+    }
+
+    .zapis-in-course-desc-text-tree {
+        @apply absolute;
+        @apply text-lg;
+        @apply w-64;
+        transform: rotate(3deg) perspective(0);
+        top: 190px;
+        left: 124px;
+    }
+
+    .about-me {
+        @apply bg-[#eeeeee];
+        @apply h-[480px];
+        @apply w-full;
+    }
+
+    .about-me-diagonal {
+        @apply rotate-180;
+    }
+
+    .about-me-diagonal svg {
+        @apply h-[94px];
+        @apply w-full;
+    }
+
+    .about-me-grid {
+        @apply flex;
+        @apply items-center;
+        @apply justify-start;
+
+    }
+
+    .about-me-grid-base {
+        color: rgba(38, 42, 46, 1);
+        @apply w-[45%];
+        position: relative;
+        top: -60px;
+    }
+
+    .about-me-grid-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl;
+        @apply pb-8;
+        @apply w-[55%];
+    }
+
+    .about-me-grid-desc {
+        @apply pb-4;
+    }
+
+    .about-me-men-anim {
+        @apply relative;
+    }
+
+    .about-me-men-bg {
+        background-color: #cdcdcd;
+        left: 280px;
+        top: -120px;
+        @apply z-10;
+        @apply w-[381px];
+        @apply h-[620px];
+        @apply absolute;
+        @apply transition-all;
+        @apply origin-center rotate-[6deg];
+        animation: bg-anim-about-me-pl 3s ease-in-out infinite;
+    }
+
+    .about-me-men-img {
+        @apply z-20;
+        @apply w-[426px];
+        @apply h-auto;
+        left: 180px;
+        top: -120px;
+        @apply relative;
+        @apply origin-center rotate-[-6deg];
+        @apply transition-all;
+        animation: bg-anim-about-me-ng 3s ease-in-out infinite;
+    }
+
+    .about-me-men-bg, .about-me-men-img {
+        @apply rounded-3xl;
+    }
+
+    @keyframes bg-anim-about-me-pl {
+        0% {
+            @apply origin-center rotate-[6deg];
+        }
+        50% {
+            @apply origin-center rotate-[8deg];
+        }
+        100% {
+            @apply origin-center rotate-[6deg];
+        }
+    }
+
+    @keyframes bg-anim-about-me-ng {
+        0% {
+            @apply origin-center rotate-[-6deg];
+        }
+        50% {
+            @apply origin-center rotate-[-8deg];
+        }
+        100% {
+            @apply origin-center rotate-[-6deg];
+        }
+    }
+
+    .time-course {
+        @apply bg-white;
+        @apply py-20;
+        @apply w-full;
+    }
+
+    .time-course-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl text-center;
+        @apply pb-4;
+    }
+
+    .time-course-grid, .time-course-grid-dots {
+        @apply grid grid-cols-3 gap-12 pt-8;
+    }
+
+    .time-course-grid-dots {
+        @apply relative;
+        @apply justify-items-center;
+    }
+
+    .time-course-grid-item-box {
+    }
+
+    .time-course-grid-item-box-header {
+        @apply font-medium;
+        @apply text-lg;
+        @apply text-center;
+        @apply pb-4;
+    }
+
+    .time-course-grid-item-box-desc {
+        @apply text-center;
+    }
+
+    .time-course-grid-item-dots {
+        @apply w-12 h-12;
+        @apply text-center;
+        @apply text-white;
+        @apply align-middle;
+        @apply text-xl;
+        @apply font-medium;
+        @apply rounded-full;
+        background: rgba(247, 31, 92, 1);
+    }
+
+    .time-course-grid-item-dots > span {
+        @apply relative top-3;
+    }
+
+    .time-course-line {
+        @apply mx-auto;
+        @apply relative top-14;
+        @apply w-8/12 h-[1px];
+        background: rgba(247, 31, 92, 1);
+    }
+
+    .format-learning {
+        @apply bg-[#FDB831];
+        @apply py-20;
+        @apply w-full;
+        margin-top: 80px;
+    }
+
+    .format-learning-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl text-center;
+        @apply pb-4;
+    }
+
+    .format-learning-grid {
+        @apply grid grid-cols-3 gap-6 pt-8;
+    }
+
+    .format-learning-grid-item {
+        @apply bg-white;
+        @apply rounded-3xl;
+        @apply p-6;
+        @apply transition-all;
+        @apply cursor-default;
+    }
+
+    .format-learning-svg-top, .format-learning-svg-bottom {
+        fill: rgba(253, 184, 49, 1);
+    }
+
+    .format-learning-svg-top {
+        @apply relative -top-28;
+    }
+
+    .format-learning-svg-bottom {
+        @apply rotate-180;
+    }
+
+    .format-learning-grid-item-header-grid {
+        @apply flex justify-between;
+        @apply border-b-2;
+        border-color: rgba(253, 184, 49, 1);
+    }
+
+    .format-learning-grid-item-header {
+        @apply py-6;
+        @apply text-2xl;
+    }
+
+    .format-learning-grid-item-header-hit {
+        background: rgba(247, 31, 92, 1);
+        @apply rounded-full;
+        @apply h-min w-min;
+        @apply py-2 px-6;
+        @apply text-white;
+        @apply mt-4;
+    }
+
+    .format-learning-grid-item-text {
+        @apply border-b-2;
+        @apply py-6;
+        border-color: rgba(253, 184, 49, 1);
+    }
+
+    .format-learning-grid-item-text-base {
+        @apply text-lg;
+        @apply pb-4;
+    }
+
+    .format-learning-grid-item-text-blue {
+        @apply text-lg;
+        @apply line-through;
+        @apply pb-4;
+        color: rgba(191, 220, 225, 1);
+    }
+
+    .format-learning-grid-item-text-base:last-child,
+    .format-learning-grid-item-text-blue:last-child {
+        @apply pb-0;
+    }
+
+    .format-learning-grid-item-count-place {
+        @apply pt-4;
+    }
+
+    .format-learning-grid-item-price-grid {
+        @apply pt-2;
+        @apply grid grid-cols-2 gap-2 justify-items-start;
+    }
+
+    .format-learning-grid-item-price-new {
+        @apply text-2xl font-medium;
+    }
+
+    .format-learning-grid-item-price-old {
+        @apply text-lg;
+        @apply line-through;
+        @apply h-min mt-1;
+    }
+
+    .format-learning-grid-item-btn {
+        @apply select-none;
+        @apply mt-4;
+        @apply w-full cursor-pointer;
+        background: rgba(38, 42, 46, 1);
+        @apply transition-all;
+        @apply rounded-3xl;
+        @apply text-white;
+        @apply text-center;
+        @apply leading-none;
+        @apply py-6 px-12;
+    }
+
+    .format-learning-grid-item-btn:hover {
+        @apply text-white;
+    }
+
+    .format-learning-grid-item-btn:active {
+        @apply text-white;
+        transform: scale(0.97);
+    }
+
+    .problem-man {
+        @apply mb-24;
+    }
+
+    .problem-man-header {
+        color: rgba(38, 42, 46, 1);
+        @apply text-4xl;
+        @apply mt-24;
+    }
+
+    .problem-man-desc {
+        @apply mt-12;
+        @apply text-lg;
+    }
+
+    .problem-man-item-slider {
+        background: #EFF6F9;
+        @apply p-8;
+        @apply rounded-2xl;
+        @apply relative;
+    }
+
+    .problem-man-item-slider:after {
+        @apply content-[''];
+        @apply absolute;
+        @apply left-10;
+        @apply -bottom-7;
+        @apply -translate-x-1/2;
+        @apply border-[15px];
+        @apply border-x-transparent;
+        @apply border-b-transparent;
+        @apply border-t-[#EFF6F9];
+    }
+
+    .problem-man-item-slider-header {
+        @apply font-medium;
+    }
+
+    .problem-man-item-slider-text {
+        @apply mt-4;
+    }
+
+    .problem-man-slider-swiper {
+        @apply mt-12;
+    }
+
+    .problem-man-user-flex {
+        @apply flex justify-start;
+        @apply mt-5;
+    }
+
+    .problem-man-user-flex img {
+        @apply w-14 h-14;
+        @apply rounded-full;
+        @apply ml-3;
+    }
+
+    .problem-man-user {
+        @apply mt-1 ml-4;
+    }
+
+    .problem-man-user-name {
+        @apply mb-1;
+    }
+
+    .swiper-pagination {
+        @apply -bottom-14 !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: rgba(247, 31, 92, 1) !important;
+    }
+
+    .swiper-button-next {
+        @apply -right-10 !important;
+        color: rgba(247, 31, 92, 1) !important;
+    }
+
+    .swiper-button-prev {
+        @apply -left-10 !important;
+        color: rgba(247, 31, 92, 1) !important;
+    }
+
+    .problem-man-bg {
+        background: rgba(253, 184, 49, 1);
+        width: 90%;
+        height: 580px;
+        border-radius: 50%;
+        @apply origin-center rotate-[10deg];
+        @apply absolute;
+        @apply -left-36;
+    }
+
+    .problem-man-text {
+        @apply mt-24;
+        color: rgba(38, 42, 46, 1);
+        @apply w-10/12;
+        @apply left-10;
+        @apply z-20 relative;
+        @apply text-xl leading-9;
+    }
+
+    .problem-man-text-header {
+        @apply text-2xl;
+    }
+
+    .problem-man-text-desc {
+        @apply mt-12;
+    }
+
+    .problem-man-text-desc div {
+        @apply w-9/12;
+        @apply pb-4;
+    }
+
+    .problem-man-bg-flex {
+        @apply flex justify-start;
+    }
+
+    .problem-man-form {
+        @apply relative;
+        @apply -left-28 top-16;
+        @apply w-6/12 h-min;
+        @apply bg-white;
+        @apply z-30;
+        @apply p-10;
+        @apply rounded-2xl;
+        @apply border-2;
+        border-color: rgba(253, 184, 49, 1);
+    }
+
+    .problem-man-btn-base {
+        @apply select-none;
+        @apply w-full cursor-pointer;
+        background: rgba(247, 31, 92, 1);
+        @apply transition-all;
+        @apply rounded-3xl;
+        @apply text-white;
+        @apply leading-none;
+        @apply py-4 px-8;
+        @apply mt-4;
+    }
+
+    .problem-man-btn-base:hover {
+        @apply text-white;
+    }
+
+    .problem-man-btn-base:active {
+        @apply text-white;
+        transform: scale(0.97);
+    }
+    footer{
+        @apply z-40;
+        @apply relative;
+        background: #EFF6F9;
+        @apply p-8;
+    }
+    .footer-svg-top {
+        fill: #EFF6F9;
+        @apply w-full;
+        @apply relative -top-16;
+    }
+    .footer-info-comp{
+        color: rgba(38, 42, 46, 1);
+    }
+    .social-flex{
+        @apply flex justify-start;
+        @apply mt-5;
+    }
+
+    .social-flex-item{
+        background: rgba(38, 42, 46, 1);
+        @apply w-12 h-12;
+        @apply rounded-full;
+    }
+
+}
