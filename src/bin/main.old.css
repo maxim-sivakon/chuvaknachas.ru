@@ -170,7 +170,7 @@
         @apply h-32;
         @apply top-0;
         @apply sticky;
-        @apply z-50;
+        @apply z-10;
 
     }
 
@@ -214,7 +214,7 @@
 
     .block-top {
         @apply bg-[#eeeeee];
-        @apply h-[520px];
+        @apply h-[861px];
         @apply w-full;
     }
 
@@ -222,51 +222,44 @@
         @apply rotate-180;
     }
 
-    .yellow-desc-diagonal {
-        position: relative;
-        top: -94px;
-    }
-
-    .block-top-diagonal svg, .yellow-desc-diagonal svg {
+    .block-top-diagonal svg {
         @apply h-[94px];
         @apply w-full;
     }
 
-    .yellow-desc-diagonal svg, .block-yellow-desc-yellow-svg-top svg, .yellow-desc-svg-bottom svg {
-        fill: rgba(253, 184, 49, 1);
+    .block-top-grid {
+        @apply flex;
+        @apply items-center;
+        @apply justify-start;
+        @apply pt-36;
     }
 
-    .block-yellow-desc-yellow-svg-top {
-        position: relative;
-        top: -174px;
-        @apply rotate-[-3deg];
-        fill: rgba(253, 184, 49, 1);
-    }
-
-    section[data-type="yellow-desc"] {
-        background: rgba(253, 184, 49, 1);
-    }
-
-    .block-top_header, .block-top_btn {
+    .block-top_start-time, .block-top_header, .block-top_desc, .block-top_btn {
         @apply text-[#505050];
         @apply select-none;
-        @apply text-center;
     }
 
+    .block-top_start-time {
+        @apply text-lg;
+        @apply pb-10;
+    }
 
     .block-top_header {
-        /*@apply w-[34rem];*/
-        @apply text-4xl;
+        @apply w-[34rem];
+        @apply text-6xl;
         @apply font-semibold;
-        @apply pb-10 pt-48;
-        @apply w-full;
+        @apply pb-10;
     }
 
     .block-top_header span {
-        @apply block;
         color: rgba(247, 31, 92, 1);
     }
 
+    .block-top_desc {
+        @apply w-[27rem];
+        @apply text-2xl;
+        @apply pb-12;
+    }
 
     .block-top_btn {
         @apply w-max cursor-pointer;
@@ -276,7 +269,7 @@
         @apply text-white;
         @apply leading-none;
         @apply py-6 px-12;
-        @apply select-none text-center mx-auto;
+        @apply select-none;
     }
 
     .block-top_btn:hover {
@@ -394,39 +387,10 @@
         margin-top: 240px;
     }
 
-    .block-yellow-desc {
-        margin: 0;
-    }
-
-    .block-yellow-header, .block-yellow-desc-header {
+    .block-yellow-header {
         color: rgba(38, 42, 46, 1);
         @apply text-4xl;
         @apply pb-4;
-    }
-
-    .block-yellow-desc-header {
-        @apply text-center;
-    }
-
-    .block-yellow-desc-text {
-        @apply text-center text-xl;
-        @apply py-6 pb-14;
-    }
-
-    .grey-video-iframe {
-        @apply rounded-2xl;
-
-    }
-
-    .grey-video-iframe iframe {
-        @apply mx-auto;
-        @apply my-10;
-        @apply w-[720px];
-        @apply h-[455px];
-    }
-
-    .yellow-desc-svg-bottom {
-        @apply rotate-180;
     }
 
     .block-yellow-grid {
@@ -466,8 +430,6 @@
 
     .block-yellow-svg-bottom {
         @apply rotate-180;
-        position: relative;
-        top: 30px;
     }
 
     .what-talk {
@@ -507,64 +469,24 @@
         @apply grow pl-8;
     }
 
-    .statistics-course {
-        @apply bg-[#eeeeee];
-        @apply py-20;
-        @apply w-full;
-    }
-
     .what-in-course {
         @apply bg-[#eeeeee];
         @apply py-20;
         @apply w-full;
     }
 
-    .statistics-course-svg-top, .statistics-course-svg-bottom,
     .what-in-course-svg-top, .what-in-course-svg-bottom {
         fill: #eeeeee;
     }
 
-    .statistics-course-svg-top,
     .what-in-course-svg-top {
         @apply relative -top-28;
     }
 
-    .statistics-course-svg-bottom,
     .what-in-course-svg-bottom {
         @apply rotate-180;
     }
 
-    .statistics-course-grid-item {
-        @apply text-center;
-        @apply mb-6;
-    }
-
-    .statistics-course-grid-item-sicle {
-        @apply mx-auto;
-        @apply rounded-full;
-        line-height: 20px;
-        @apply h-28;
-        @apply w-28;
-        background: rgba(253, 184, 49, 1);
-    }
-
-    .statistics-course-grid-item-sicle > span {
-        @apply pt-12;
-        @apply block;
-    }
-
-    .statistics-course-grid-item > span {
-        @apply w-72;
-        @apply block;
-        @apply mt-4;
-    }
-
-    .statistics-course-grid {
-        @apply grid grid-cols-2 gap-2 pt-8;
-        @apply justify-items-center;
-    }
-
-    .statistics-course-header,
     .what-in-course-header {
         color: rgba(38, 42, 46, 1);
         @apply text-4xl;
@@ -615,12 +537,6 @@
         color: rgba(38, 42, 46, 1);
         @apply text-4xl;
         @apply pb-4;
-        @apply text-center;
-    }
-
-    .zapis-in-course-form {
-        @apply mx-auto;
-        @apply w-96;
     }
 
     .zapis-in-course-grid {
@@ -629,6 +545,10 @@
 
     .zapis-in-course-grid-item {
         @apply relative;
+    }
+
+    .zapis-in-course-header {
+        @apply w-[57%];
     }
 
     .zapis-in-course-grid form {
@@ -656,18 +576,6 @@
         background: rgba(229, 160, 25, 1);
         @apply text-white;
         transform: scale(0.97);
-    }
-
-    .grey-video-block {
-        background: #eeeeee;
-        @apply py-16;
-    }
-
-    .grey-video-header {
-        color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
-        @apply pt-6;
-        @apply text-center;
     }
 
     .zapis-in-course-desc-bg {
@@ -708,17 +616,6 @@
         transform: rotate(3deg) perspective(0);
         top: 190px;
         left: 124px;
-    }
-
-    .dop-text {
-        @apply py-24;
-        @apply bg-white;
-    }
-
-    .dop-text-header {
-        color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
-        @apply pb-8;
     }
 
     .about-me {
@@ -997,14 +894,13 @@
     }
 
     .problem-man {
-        @apply py-24;
-        background: rgba(253, 184, 49, 1);
+        @apply mb-24;
     }
 
     .problem-man-header {
         color: rgba(38, 42, 46, 1);
         @apply text-4xl;
-        @apply mt-6;
+        @apply mt-24;
     }
 
     .problem-man-desc {
@@ -1169,23 +1065,12 @@
     .social-flex {
         @apply flex justify-start;
         @apply mt-5;
-        @apply mx-auto;
     }
 
     .social-flex-item {
-        @apply m-2;
-        @apply p-4;
-        @apply rounded-full;
         background: rgba(38, 42, 46, 1);
+        @apply w-12 h-12;
+        @apply rounded-full;
     }
 
-    .social-flex-item svg {
-        @apply w-6 h-6;
-        fill: white;
-    }
-
-    .social-flex-item.insta svg {
-        background: transparent;
-        fill: transparent;
-    }
 }
