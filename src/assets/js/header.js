@@ -3,54 +3,9 @@ window.addEventListener('scroll', function () {
     if (window.innerWidth >= 1024) {
         let header = document.getElementById('header');
         if (window.pageYOffset > 0) {
-            header.classList.add('-top-11');
+            header.classList.add('-top-[140px]');
         } else {
-            header.classList.remove('-top-11');
-        }
-    }
-});
-
-// page up
-document.addEventListener('readystatechange', function () {
-    if (document.readyState === "complete") {
-        let pageTop = document.getElementById('page-top');
-        pageTop.onclick = function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    }
-});
-
-// show scroll top
-window.addEventListener('scroll', function () {
-    let pageTop = document.getElementById('page-top');
-    if (window.pageYOffset > 0) {
-        pageTop.classList.add('!block');
-    } else {
-        pageTop.classList.remove('!block');
-    }
-});
-
-// search line
-document.addEventListener('readystatechange', function () {
-    if (document.readyState === "complete") {
-        var controlSearchMb = document.getElementById("control-search-mb");
-        var controlSearchPc = document.getElementById("control-search-pc");
-        var btnSearchActionClose = document.getElementById("btn-search-action-close");
-        var mainSearch = document.getElementById("main-search");
-        var mainSearchBlur = document.querySelector('#main-search > .body-blur');
-
-        controlSearchMb.onclick = function () {
-            mainSearch.style.display = 'block';
-        }
-        controlSearchPc.onclick = function () {
-            mainSearch.style.display = 'block';
-        }
-        btnSearchActionClose.onclick = function () {
-            mainSearch.style.display = 'none';
-        }
-        mainSearchBlur.onclick = function () {
-            mainSearch.style.display = 'none';
+            header.classList.remove('-top-[140px]');
         }
     }
 });
@@ -58,29 +13,30 @@ document.addEventListener('readystatechange', function () {
 // mobile menu
 document.addEventListener('readystatechange', function () {
     if (document.readyState === "complete") {
-        var mainMobileMenuOpen = document.getElementById("main-mobile-menu-open");
-        var mobileMenuClose = document.getElementById("mobile-menu-close");
-        var mainMobileMenuBar = document.getElementById("main-mobile-menu-bar");
-        var mainMobileMenuBarBlur = document.getElementById("main-mobile-menu-bar-blur");
-
-        mainMobileMenuOpen.onclick = function () {
-            mainMobileMenuBar.style.display = 'block';
+        var openMobileMenu = document.getElementById("open-menu");
+        var closeMobileMenu = document.getElementById("close-menu");
+        var mobileMenu = document.getElementById("mobile-menu");
+        let body = document.getElementById('body');
+        openMobileMenu.onclick = function () {
+            mobileMenu.style.display = 'block';
+            body.classList.add('no-scroll');
         }
-        mobileMenuClose.onclick = function () {
-            mainMobileMenuBar.style.display = 'none';
-        }
-        mainMobileMenuBarBlur.onclick = function () {
-            mainMobileMenuBar.style.display = 'none';
+        closeMobileMenu.onclick = function () {
+            mobileMenu.style.display = 'none';
+            body.classList.remove('no-scroll');
         }
     }
 });
 
-// show mobile menu level
-document.addEventListener('click', function () {
+document.addEventListener('readystatechange', function () {
     if (document.readyState === "complete") {
-        let menuMobileLevel = document.getElementById("menu-mobile-level");
-        menuMobileLevel.onclick = function () {
-            menuMobileLevel.classList.toggle('active-level-menu');
-        }
+        document.querySelectorAll('.mobile-item-point').forEach(el =>
+            el.addEventListener('click', function (elo) {
+                var mobileMenu = document.getElementById("mobile-menu");
+                let body = document.getElementById('body');
+                mobileMenu.style.display = 'none';
+                body.classList.remove('no-scroll');
+            })
+        );
     }
 });

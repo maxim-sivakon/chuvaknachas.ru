@@ -159,6 +159,10 @@
         font-style: italic;
         font-display: swap;
     }
+    body.no-scroll {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 
     html {
         font-family: 'Gotham Pro', serif;
@@ -167,22 +171,37 @@
     }
 
     header {
-        @apply h-32;
+        @apply h-16 lg:h-32;
         @apply top-0;
         @apply sticky;
         @apply z-50;
 
     }
 
+    #pc-header {
+        @apply hidden lg:block;
+    }
+
+    #mobile-header {
+        @apply block lg:hidden;
+    }
+
     .header-block {
         background: rgba(38, 42, 46, 1);
     }
 
-    .header-block-menu {
+    .header-block-menu, .header-block-line {
         background: #cdcdcd;
     }
 
     .header-cont, .header-menu-list {
+        @apply py-4;
+        @apply flex;
+        @apply items-center;
+        @apply place-content-evenly;
+    }
+
+    .header-block-line {
         @apply py-4;
         @apply flex;
         @apply items-center;
@@ -197,6 +216,25 @@
         color: #f71f5c;
     }
 
+    .header-block-line .header-logo {
+        @apply w-7;
+    }
+
+    .header-block-line .header-site-name {
+        color: rgba(38, 42, 46, 1);
+        @apply text-2xl;
+        @apply font-semibold;
+        @apply uppercase;
+    }
+
+    .header-block-line-open-menu {
+        @apply w-8;
+    }
+
+    .header-block-line-close-menu {
+        @apply w-8;
+    }
+
     .header-logo {
         @apply w-14;
     }
@@ -208,13 +246,32 @@
         @apply uppercase;
     }
 
+    #mobile-menu {
+        @apply hidden;
+        @apply absolute top-0 left-0 z-[100];
+        @apply w-full h-screen;
+        @apply bg-[#eeeeee];
+    }
+
+    #mobile-menu ul {
+        @apply mx-auto w-max;
+    }
+
+    #mobile-menu ul a {
+        @apply py-2 block;
+    }
+
     .container {
         @apply px-20;
     }
 
+    #close-menu {
+        @apply m-4;
+    }
+
     .block-top {
         @apply bg-[#eeeeee];
-        @apply h-[520px];
+        @apply h-[440px] md:h-[520px];
         @apply w-full;
     }
 
@@ -239,6 +296,7 @@
     .block-yellow-desc-yellow-svg-top {
         position: relative;
         top: -174px;
+        @apply h-[35px];
         @apply rotate-[-3deg];
         fill: rgba(253, 184, 49, 1);
     }
@@ -253,12 +311,11 @@
         @apply text-center;
     }
 
-
     .block-top_header {
-        /*@apply w-[34rem];*/
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply font-semibold;
-        @apply pb-10 pt-48;
+        @apply pb-5 md:pb-10;
+        @apply pt-24 md:pt-48;
         @apply w-full;
     }
 
@@ -267,15 +324,15 @@
         color: rgba(247, 31, 92, 1);
     }
 
-
     .block-top_btn {
         @apply w-max cursor-pointer;
         background: rgba(253, 184, 49, 1);
         @apply transition-all;
         @apply rounded-3xl;
         @apply text-white;
-        @apply leading-none;
-        @apply py-6 px-12;
+        @apply leading-none block;
+        @apply py-3 md:py-6;
+        @apply px-6 md:px-12;
         @apply select-none text-center mx-auto;
     }
 
@@ -400,7 +457,7 @@
 
     .block-yellow-header, .block-yellow-desc-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply pb-4;
     }
 
@@ -409,8 +466,9 @@
     }
 
     .block-yellow-desc-text {
-        @apply text-center text-xl;
-        @apply py-6 pb-14;
+        @apply text-center;
+        @apply text-lg lg:text-base;
+        @apply py-6 pb-20;
     }
 
     .grey-video-iframe {
@@ -421,8 +479,8 @@
     .grey-video-iframe iframe {
         @apply mx-auto;
         @apply my-10;
-        @apply w-[720px];
-        @apply h-[455px];
+        @apply w-full;
+        @apply h-[225px] md:h-[455px];
     }
 
     .yellow-desc-svg-bottom {
@@ -490,7 +548,7 @@
     }
 
     .what-talk-grid-item-header {
-        @apply text-xl font-[];
+        @apply text-xl;
         @apply pb-8;
     }
 
@@ -560,14 +618,20 @@
     }
 
     .statistics-course-grid {
-        @apply grid grid-cols-2 gap-2 pt-8;
+        @apply grid;
+        @apply grid-cols-1 lg:grid-cols-2;
+        @apply gap-2 pt-8;
         @apply justify-items-center;
+    }
+
+    .statistics-course-header {
+        @apply text-center;
     }
 
     .statistics-course-header,
     .what-in-course-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply pb-4;
     }
 
@@ -613,14 +677,14 @@
 
     .zapis-in-course-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply pb-4;
         @apply text-center;
     }
 
     .zapis-in-course-form {
         @apply mx-auto;
-        @apply w-96;
+        @apply w-full lg:w-96;
     }
 
     .zapis-in-course-grid {
@@ -665,7 +729,7 @@
 
     .grey-video-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply pt-6;
         @apply text-center;
     }
@@ -717,7 +781,7 @@
 
     .dop-text-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply pb-8;
     }
 
@@ -752,7 +816,7 @@
 
     .about-me-grid-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply pb-8;
         @apply w-[55%];
     }
@@ -826,7 +890,8 @@
 
     .time-course-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl text-center;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
+        @apply text-center;
         @apply pb-4;
     }
 
@@ -884,7 +949,8 @@
 
     .format-learning-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl text-center;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
+        @apply text-center;
         @apply pb-4;
     }
 
@@ -1003,7 +1069,7 @@
 
     .problem-man-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-4xl;
+        @apply text-2xl 2xl:text-4xl lg:text-2xl;
         @apply mt-6;
     }
 
@@ -1166,10 +1232,15 @@
         color: rgba(38, 42, 46, 1);
     }
 
+
     .social-flex {
         @apply flex justify-start;
         @apply mt-5;
         @apply mx-auto;
+    }
+
+    .social-flex.mobile {
+        @apply justify-center;
     }
 
     .social-flex-item {
