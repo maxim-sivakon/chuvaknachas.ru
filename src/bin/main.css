@@ -329,7 +329,7 @@
         background: rgba(253, 184, 49, 1);
         @apply transition-all;
         @apply rounded-3xl;
-        @apply text-white;
+        @apply text-black;
         @apply leading-none block;
         @apply py-3 md:py-6;
         @apply px-6 md:px-12;
@@ -609,6 +609,7 @@
     .statistics-course-grid-item-sicle > span {
         @apply pt-12;
         @apply block;
+        @apply font-medium;
     }
 
     .statistics-course-grid-item > span {
@@ -705,7 +706,7 @@
         background: rgba(253, 184, 49, 1);
         @apply transition-all;
         @apply rounded-3xl;
-        @apply text-white;
+        @apply text-black;
         @apply leading-none;
         @apply py-4 px-8;
         @apply mt-4;
