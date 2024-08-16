@@ -11,30 +11,30 @@
     <link rel="preconnect" href="//mc.yandex.ru">
     <link rel="preconnect" href="https://www.youtube.com">
     <link rel="preconnect" href="https://www.instagram.com">
-    <link rel="apple-touch-icon" href="/proxy/static/node-sbol-microfront/icons/apple-touch-icon-72x72.png"
+    <link rel="apple-touch-icon" href="/src/assets/icons/apple-touch-icon-72x72.png"
           sizes="72x72">
-    <link rel="apple-touch-icon" href="/proxy/static/node-sbol-microfront/icons/apple-touch-icon-76x76.png"
+    <link rel="apple-touch-icon" href="/src/assets/icons/apple-touch-icon-76x76.png"
           sizes="76x76">
-    <link rel="apple-touch-icon" href="/proxy/static/node-sbol-microfront/icons/apple-touch-icon-144x144.png"
+    <link rel="apple-touch-icon" href="/src/assets/icons/apple-touch-icon-144x144.png"
           sizes="144x144">
-    <link rel="apple-touch-icon" href="/proxy/static/node-sbol-microfront/icons/apple-touch-icon-152x152.png"
+    <link rel="apple-touch-icon" href="/src/assets/icons/apple-touch-icon-152x152.png"
           sizes="152x152">
-    <link rel="apple-touch-icon" href="/proxy/static/node-sbol-microfront/icons/apple-touch-icon-180x180.png"
+    <link rel="apple-touch-icon" href="/src/assets/icons/apple-touch-icon-180x180.png"
           sizes="180x180">
-    <link rel="apple-touch-icon" href="/proxy/static/node-sbol-microfront/icons/apple-touch-icon.png">
-    <link rel="mask-icon" href="/proxy/static/node-sbol-microfront/icons/safari-pinned-tab.svg" color="#21A038">
+    <link rel="apple-touch-icon" href="/src/assets/icons/apple-touch-icon.png">
+    <link rel="mask-icon" href="/src/assets/icons/safari-pinned-tab.svg" color="#cdcdcd">
     <meta name="msapplication-TileImage"
-          content="/proxy/static/node-sbol-microfront/icons/apple-touch-icon-144x144.png">
-    <link rel="icon" href="/proxy/static/node-sbol-microfront/icons/favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="/proxy/static/node-sbol-microfront/icons/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="shortcut icon" href="/proxy/static/node-sbol-microfront/icons/favicon.ico">
+          content="/src/assets/icons/apple-touch-icon-144x144.png">
+    <link rel="icon" href="/src/assets/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="/src/assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="shortcut icon" href="/src/assets/icons/favicon.ico">
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-TileColor" content="#21A038">
-    <meta name="msapplication-navbutton-color" content="#ffffff">
+    <meta name="theme-color" content="#cdcdcd">
+    <meta name="msapplication-TileColor" content="#cdcdcd">
+    <meta name="msapplication-navbutton-color" content="#cdcdcd">
     <meta name="msapplication-tap-highlight" content="no">
-    <link rel="manifest" href="/proxy/static/node-sbol-microfront/icons/site.webmanifest">
+    <link rel="manifest" href="/src/assets/manifest/site.webmanifest">
     <meta name="format-detection" content="telephone=no">
     <meta name="google" content="notranslate">
     <meta property="og:locale" content="ru_RU">
@@ -58,11 +58,9 @@
           content="Освой профессию мастера на час и начни контролировать свой доход и время">
 
     <link rel="stylesheet" href="src/assets/css/build.css">
-
-    <script src="src/assets/js/header.js"></script>
-    <script src="src/assets/js/phone.js"></script>
+    <script src="src/assets/js/lazyload.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </head>
 <body id="body">
 <header data-type="header" id="header">
@@ -206,7 +204,7 @@
             <div class="container mx-auto">
                 <div class="grey-video-header">Это видео поможет тебе<br> сделать первый шаг!</div>
                 <div class="grey-video-iframe">
-                    <iframe src="https://www.youtube.com/embed/zhDwjnYZiCo?si=XoVPHSaoc6ghB_lK"
+                    <iframe class="lazyload" data-src="https://www.youtube.com/embed/zhDwjnYZiCo?si=XoVPHSaoc6ghB_lK"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -434,5 +432,10 @@
         </div>
     </div>
 </footer>
+
+<script src="src/assets/js/header.js"></script>
+<script src="src/assets/js/phone.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </body>
 </html>
