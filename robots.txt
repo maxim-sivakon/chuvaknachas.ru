@@ -1,4 +1,4 @@
 Sitemap: https://chuvaknachas.ru/sitemap.xml
 User-agent: *
 Allow: 
-Disallow: https://chuvaknachas.ru/src/
+Disallow: /src/*
