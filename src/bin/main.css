@@ -224,14 +224,15 @@
         @apply py-4;
         @apply flex flex-wrap;
     }
+
     .header-menu-list.mobile > a {
         @apply text-xs text-center pt-2 px-1.5;
         color: #cdcdcd;
     }
+
     .header-menu-list.mobile > a:hover {
         color: #f71f5c;
     }
-
 
 
     .header-block-line .header-logo {
