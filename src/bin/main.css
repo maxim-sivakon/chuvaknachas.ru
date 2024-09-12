@@ -1076,6 +1076,10 @@
         @apply text-center;
     }
 
+    .format-learning-grid-item-price-new.red {
+        @apply text-red-500 !important;
+    }
+
     .format-learning-grid-item-price-old {
         @apply text-lg;
         @apply line-through;
