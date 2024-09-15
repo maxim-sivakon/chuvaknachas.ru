@@ -1,10 +1,19 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars(trim($_POST['first-name']));
-    $phone = htmlspecialchars(trim($_POST['phone-user']));
-    $email = htmlspecialchars(trim($_POST['email-user']));
-    $response = [];
+$response = [];
+
+
     try {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = htmlspecialchars(trim($_POST['first-name']));
+            $phone = htmlspecialchars(trim($_POST['phone-user']));
+            $email = htmlspecialchars(trim($_POST['email-user']));
+        } else {
+            $response['status'] = 'error';
+            $response['message'] = 'Что-то пошло не так. Попробуйте еще раз.';
+            echo json_encode($response);
+            exit;
+        }
+
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $response['status'] = 'error';
             $response['message'] = 'Некорректный адрес электронной почты.';
@@ -36,14 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= 'Cc: sales@chuvaknachas.ru' . "\r\n";
         $headers .= 'Bcc: sales@chuvaknachas.ru' . "\r\n";
         mail($to, $subject, $message, $headers);
+        $response['status'] = 'success';
+        $response['message'] = $name.", заявка успешно отправлена.";
     } catch (Exception $e) {
         $response['status'] = 'error';
         $response['message'] = "Ошибка при отправке сообщения: {$mail->ErrorInfo}";
     }
-} else {
-    $response['status'] = 'error';
-    $response['message'] = 'Неверный метод запроса.';
-}
+
 
 echo json_encode($response); // Отправляем ответ в формате JSON
 
