@@ -505,7 +505,7 @@
 
     }
 
-    .grey-video-iframe video {
+    .grey-video-iframe iframe {
         @apply mx-auto;
         @apply my-10;
         @apply w-full;
