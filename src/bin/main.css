@@ -509,7 +509,7 @@
         @apply mx-auto;
         @apply my-10;
         @apply w-full;
-        /*@apply h-[225px] md:h-[455px];*/
+        @apply h-[225px] md:h-[455px];
     }
 
     .yellow-desc-svg-bottom {
@@ -759,14 +759,14 @@
 
     .grey-video-header {
         color: rgba(38, 42, 46, 1);
-        @apply text-2xl 2xl:text-4xl lg:text-2xl;
+        @apply text-sm 2xl:text-4xl lg:text-2xl;
         @apply pt-6;
         @apply text-center;
     }
 
     .grey-video-header2 {
         color: rgba(38, 42, 46, 1);
-        @apply text-2xl 2xl:text-4xl lg:text-2xl;
+        @apply text-sm 2xl:text-4xl lg:text-2xl;
         @apply py-2;
         @apply text-center;
     }
@@ -779,6 +779,7 @@
     }
 
     .grey-video-desc {
+        @apply text-sm lg:text-lg;
         @apply text-center;
     }
 
@@ -1077,7 +1078,7 @@
         @apply w-max;
         @apply pt-2;
         @apply mx-auto;
-        @apply grid grid-cols-2 gap-2 justify-items-start;
+        @apply grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-2 justify-items-start;
     }
 
     .format-learning-grid-item-price-new {
