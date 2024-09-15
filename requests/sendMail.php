@@ -3,10 +3,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(trim($_POST['first-name']));
     $phone = htmlspecialchars(trim($_POST['phone-user']));
     $email = htmlspecialchars(trim($_POST['email-user']));
-
+    $response = [];
     try {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return false;
+            $response['status'] = 'error';
+            $response['message'] = 'Некорректный адрес электронной почты.';
+            echo json_encode($response);
+            exit;
+
         }
         $to  = 'sales@chuvaknachas.ru';
         $subject = 'Новая заявка с сайта chuvaknachas.ru';
