@@ -220,6 +220,15 @@
         color: #f71f5c;
     }
 
+    #two-fuck-block{
+        @apply flex items-stretch;
+        @apply text-center;
+    }
+    #two-fuck-block img{
+        @apply h-12;
+    }
+
+
     .header-menu-list.mobile {
         @apply py-4;
         @apply flex flex-wrap;

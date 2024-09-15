@@ -168,7 +168,18 @@
     <section data-type="top">
         <div class="block-top">
             <div class="container mx-auto">
-                <div class="block-top_header">Освой профессию мастера на час и начни <span>контролировать свой доход и время</span>
+
+                <div class="block-top_header">
+                    <div class="space-x-4 mb-4">
+                        <a href="https://www.instagram.com/reel/CzdekkVgXbn/?igsh=eTd3d3FwcnA1amV6" class=" text-2xl inline-block px-6 py-3 text-white bg-red-600 rounded hover:bg-red-700">
+                            Подпишись на YouTube
+                        </a>
+                        <a href="https://www.instagram.com/reel/CzdekkVgXbn/?igsh=eTd3d3FwcnA1amV6" class="text-2xl inline-block px-6 py-3 text-white bg-pink-600 rounded hover:bg-pink-700">
+                            Подпишись на Instagram
+                        </a>
+                    </div>
+
+                    Освой профессию мастера на час и начни <span>контролировать свой доход и время</span>
                 </div>
                 <a href="#zapis_course" class="block-top_btn">Оставить заявку</a>
             </div>
@@ -273,7 +284,7 @@
         <div class="zapis-in-course">
             <div class="container mx-auto">
                 <div class="zapis-in-course-header">Запишитесь на курс прямо сейчас</div>
-                <form action="" class="zapis-in-course-form">
+                <form action="" id="zapis-in-course-form" class="zapis-in-course-form">
                     <div class="sm:col-span-3 mb-4">
                         <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Имя <span
                                 class="text-red-500">*</span></label>
@@ -305,6 +316,26 @@
                         <button class="btn-base" type="submit">Записаться</button>
                     </div>
                 </form>
+                <script>
+                    document.getElementById('zapis-in-course-form').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+                        const formData = new FormData(this);
+
+                        fetch('requests/sendMail.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                            .then(response => response.text())
+                            .then(data => {
+                                alert(data); // Выводим ответ от сервера
+                            })
+                            .catch(error => {
+                                console.error('Ошибка:', error);
+                            });
+                    });
+                </script>
+
                 <div class="grey-video-header3">Цена курса</div>
                 <div class="format-learning-grid-item-price-grid">
                     <div class="format-learning-grid-item-price-new red">6 000 ₽</div>
