@@ -34,7 +34,7 @@ $response = [];
   <p>Телефон: '.$email.'</p>
   <p>Почта: '.$phone.'</p>
   
-  <b>Время с сервера (Asia/Almaty): '.date('m.d.Y h:i:s G', time()).'</b>
+  <b>Время с сервера (Asia/Almaty): '.date('d.m.Y H:m:s').'</b>
 </body>
 </html>
 ';
