@@ -1,11 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получаем данные из формы и очищаем их
     $name = htmlspecialchars(trim($_POST['first-name']));
     $phone = htmlspecialchars(trim($_POST['phone-user']));
     $email = htmlspecialchars(trim($_POST['email-user']));
 
-    // Проверка на корректность email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "Некорректный адрес электронной почты.";
         exit;
@@ -13,10 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $to  = 'sales@chuvaknachas.ru';
 
-    // тема письма
     $subject = 'Новая заявка с сайта chuvaknachas.ru';
 
-    // текст письма
     $message = '
 <html>
 <head>
@@ -24,18 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
   <p>Новая заявка с сайта chuvaknachas.ru</p>
-  <table>
-    <tr>
-      <th>Имя</th><th>Почта</th><th>Телефон</th>
-    </tr>
-    <tr>
-      <td>'.$name.'</td><td>'.$email.'</td><td>'.$phone.'</td>
-    </tr>
-  </table>
+  <p>Имя: '.$name.'</p>
+  <p>Телефон: '.$email.'</p>
+  <p>Почта: '.$phone.'</p>
+  
+  <b>Время с сервера: '.date("Y-m-d", null).'</b>
 </body>
 </html>
 ';
-
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
     $headers .= 'To: chuvaknachas <sales@chuvaknachas.ru>' . "\r\n";
@@ -43,13 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= 'Cc: sales@chuvaknachas.ru' . "\r\n";
     $headers .= 'Bcc: sales@chuvaknachas.ru' . "\r\n";
 
-
-
-
-
-
-
-    // Отправка письма
     if (mail($to, $subject, $message, $headers)) {
         echo "Сообщение успешно отправлено!";
     } else {
