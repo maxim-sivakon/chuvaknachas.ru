@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <p>Телефон: '.$email.'</p>
   <p>Почта: '.$phone.'</p>
   
-  <b>Время с сервера (Asia/Almaty): '.date('m.d.Y h:i:s a', time()).'</b>
+  <b>Время с сервера (Asia/Almaty): '.date('m.d.Y h:i:s G', time()).'</b>
 </body>
 </html>
 ';
