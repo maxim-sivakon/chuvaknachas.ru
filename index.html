@@ -329,13 +329,13 @@
                             .then(data => {
                                 if (data.status === 'success') {
                                     document.getElementById('sun-btn-form').setAttribute("disabled", "");
-                                    alert(data);
+                                    alert(data.message);
                                 } else {
-                                    alert(data);
+                                    alert(data.message);
                                 }
                             })
                             .catch(error => {
-                                console.error('Ошибка:', error);
+                                console.error('Ошибка:', data.message);
                             });
                     });
                 </script>
