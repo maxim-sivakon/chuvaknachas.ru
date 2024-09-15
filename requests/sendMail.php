@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получаем данные из формы и очищаем их
     $name = htmlspecialchars(trim($_POST['first-name']));
@@ -17,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email\r\n";
 
     // Отправка письма
-    if (mail("m.sivakon@yandex.com", $subject, $message, $headers)) {
+    if (mail("sales@chuvaknachas.ru", $subject, $message, $headers)) {
         echo "Сообщение успешно отправлено!";
     } else {
         echo "Ошибка при отправке сообщения.";

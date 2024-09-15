@@ -505,11 +505,11 @@
 
     }
 
-    .grey-video-iframe iframe {
+    .grey-video-iframe video {
         @apply mx-auto;
         @apply my-10;
         @apply w-full;
-        @apply h-[225px] md:h-[455px];
+        /*@apply h-[225px] md:h-[455px];*/
     }
 
     .yellow-desc-svg-bottom {
