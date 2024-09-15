@@ -501,7 +501,7 @@
 
     .grey-video-iframe {
         @apply rounded-2xl;
-        @apply bg-white;
+        /*@apply bg-black;*/
 
     }
 
@@ -761,7 +761,7 @@
         color: rgba(38, 42, 46, 1);
         @apply text-sm 2xl:text-4xl lg:text-2xl;
         @apply pt-6;
-        @apply text-center;
+        @apply text-center font-medium;
     }
 
     .grey-video-header2 {
