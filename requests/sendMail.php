@@ -1,5 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    date_default_timezone_set('Asia/Almaty');
     $name = htmlspecialchars(trim($_POST['first-name']));
     $phone = htmlspecialchars(trim($_POST['phone-user']));
     $email = htmlspecialchars(trim($_POST['email-user']));
