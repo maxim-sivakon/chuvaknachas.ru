@@ -312,7 +312,7 @@
                         </div>
                     </div>
                     <div>
-                        <button class="btn-base" type="submit">Записаться</button>
+                        <button id="sun-btn-form" class="btn-base" type="submit">Записаться</button>
                     </div>
                 </form>
                 <script>
@@ -327,6 +327,7 @@
                         })
                             .then(response => response.text())
                             .then(data => {
+                                document.getElementById('sun-btn-form').setAttribute('disable');
                                 alert(data); // Выводим ответ от сервера
                             })
                             .catch(error => {
