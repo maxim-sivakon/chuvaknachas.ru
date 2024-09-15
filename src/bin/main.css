@@ -1077,17 +1077,18 @@
     .format-learning-grid-item-price-grid {
         @apply w-max;
         @apply pt-2;
-        @apply mx-auto;
+        @apply mx-auto text-center;
         @apply grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-2 justify-items-start;
     }
 
     .format-learning-grid-item-price-new {
         @apply text-2xl font-medium;
-        @apply text-center;
+        margin: auto;
     }
 
     .format-learning-grid-item-price-new.red {
         @apply text-red-500 !important;
+        margin: auto;
     }
 
     .format-learning-grid-item-price-old {
