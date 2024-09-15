@@ -509,7 +509,7 @@
         @apply mx-auto;
         @apply my-10;
         @apply w-full;
-        @apply h-[225px] w-[450px] md:h-[455px] md:w-[910px];
+        @apply h-[225px] w-[400px] md:h-[455px] md:w-[800px];
     }
 
     .yellow-desc-svg-bottom {
