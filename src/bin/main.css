@@ -303,7 +303,7 @@
 
     .block-top {
         @apply bg-[#eeeeee];
-        @apply h-[700px] sm:h-[500px] md:h-[520px];
+        @apply h-[740px] sm:h-[500px] md:h-[520px];
         @apply w-full;
     }
 
