@@ -191,7 +191,7 @@
     }
 
     .desc_bottom_btn{
-        @apply text-center py-4;
+       @apply select-none text-center mx-auto py-4;
     }
 
     .header-block-menu, .header-block-line {
@@ -303,7 +303,7 @@
 
     .block-top {
         @apply bg-[#eeeeee];
-        @apply h-[680px] sm:h-[440px] md:h-[480px];
+        @apply h-[700px] sm:h-[460px] md:h-[500px];
         @apply w-full;
     }
 
