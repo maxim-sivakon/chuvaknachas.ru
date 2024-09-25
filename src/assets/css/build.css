@@ -1056,13 +1056,13 @@ header {
 
 @media (min-width: 640px) {
   .block-top {
-    height: 460px;
+    height: 480px;
   }
 }
 
 @media (min-width: 768px) {
   .block-top {
-    height: 500px;
+    height: 520px;
   }
 }
 
@@ -3773,8 +3773,8 @@ footer {
     grid-column: span 3 / span 3;
   }
 
-  .sm\:h-\[460px\] {
-    height: 460px;
+  .sm\:h-\[480px\] {
+    height: 480px;
   }
 
   .sm\:grid-cols-2 {
@@ -3804,8 +3804,8 @@ footer {
     height: 455px;
   }
 
-  .md\:h-\[500px\] {
-    height: 500px;
+  .md\:h-\[520px\] {
+    height: 520px;
   }
 
   .md\:w-\[790px\] {
