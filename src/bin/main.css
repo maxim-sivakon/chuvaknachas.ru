@@ -190,6 +190,10 @@
         background: rgba(38, 42, 46, 1);
     }
 
+    .desc_bottom_btn{
+        @apply text-center py-4;
+    }
+
     .header-block-menu, .header-block-line {
         background: #cdcdcd;
     }
